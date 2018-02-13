@@ -1,101 +1,91 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+html{
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+body{
   background-color: lightgrey;
+  margin: 0;
 }
 .container{
+  background-image: url("https://vignette.wikia.nocookie.net/marvel/images/3/30/Universo_Marvel.png/revision/latest?cb=20180130223827&path-prefix=pt-br");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-main{
-  margin: 0 1rem;
-  background-color: silver;
-  border: 1px solid silver;
-  box-shadow: 1px 2px 4px 1px #929199;
-  border-radius: 4px;
-}
-main a{
-  font-size: 1rem;
-  margin-top: 2rem;
-  padding: 2rem 0;
-  text-decoration:none;
-  grid-column:1/3;
-  color:blue;
-}
-.about{
-  font-size: 1rem;
-  line-height: 1.25;
-  border-radius: 4px;
-}
-.about h3, p{
-  margin: 0;
-  padding: 0 1rem;
-}
-figure{
-  border-radius: 4px;
-  margin: 0;
-}
-figure img{
-  border-radius: 4px;
-  box-shadow: 1px 2px 4px 1px #929199;
-  width: 80%;
-  background-color: #fff;
+  grid-gap: 1rem;
   padding: .5rem;
 }
-button{
-  grid-column:1/3;
+main{
+  grid-column: 2/3;
+  background: #fff;
   padding: 1rem;
-  margin: 1rem;
-  font-size: 1rem;
-  background: teal;
-  cursor: pointer;
-}
-button:disabled{
-  color: #fff;
-}
-footer{
-  background: darkgrey;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   text-align: center;
-  align-items: center;
-  justify-content: space-around;
+  border: 5px;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 2px 1px #0C0A0ACC;
 }
-
-@media only screen and (min-width:550px) and (max-width:670px){
+img{
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 1px 1px .5px 1px #0C0A0ACC;
+}
+main h3{
+  box-shadow: 1px 1px 1px 1px #0C0A0ACC;
+  font-weight: 700;
+  padding: .7rem;
+  background-color: #bec1e480;
+  color: #0C0A0ACC;
+  border: .5rem;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  margin: .5rem 0;
+}
+button{
+  grid-column: 2/3;
+  margin: 0;
+  border-radius: .5rem;
+  background-color: blue;
+  border: none;
+  padding: .5rem;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 1px 1px 2px 1px #0C0A0ACC;
+  text-transform: uppercase;
+}
+@media only screen and (min-width:560px) and (max-width:960px) {
 
   .container{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 1rem;
-  }
-  main{
-    grid-column: 1/3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 25% 1fr 25%;
   }
 }
-
-@media only screen and (min-width:671px){
+@media only screen and (max-width:559px) {
 
   .container{
     display: grid;
-    grid-template-columns:1fr 1fr;
-    width: 800px;
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
   main{
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-column: 1/2;
   }
-  figure{
-    width: 100%;
+  main h3{
+    font-size: 1rem;
+    padding: .7rem;
   }
+  button{
+    font-size: 1rem;
+    padding: .5rem;
+    grid-column: 1/2;
+  }
+
 }
