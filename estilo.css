@@ -42,10 +42,10 @@ main{
   height:38px;
   display:inline;
   border-radius:50%;
-  background-color:green;
+  background-color:#0000ff;
   float: left;
   position:absolute;
-  color:#0000ff;
+  color:#fff;
   font-size:1.5rem;
 }
 img{
