@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $.ajax({
-      url: "https://gateway.marvel.com/v1/public/characters?events=253&limit=5&ts=1&apikey=5ed88e99e4209269e58dc8794934a142&hash=384996b46b52aa1c3fe1741c5f11a3c7",
+      url: "http://gateway.marvel.com/v1/public/characters?events=253&limit=5&ts=1&apikey=5ed88e99e4209269e58dc8794934a142&hash=384996b46b52aa1c3fe1741c5f11a3c7",
       type: "GET",
       success:function (data) {
         console.log("Deu certo!");
@@ -26,7 +26,7 @@ $(document).ready(function(){
     $('#botao').html("Procurando...").prop('disabled',true)
     //manda a requisição para API
     $.ajax({
-        url: "https://gateway.marvel.com/v1/public/characters?events=253&limit=100&ts=1&apikey=5ed88e99e4209269e58dc8794934a142&hash=384996b46b52aa1c3fe1741c5f11a3c7",
+        url: "http://gateway.marvel.com/v1/public/characters?events=253&limit=100&ts=1&apikey=5ed88e99e4209269e58dc8794934a142&hash=384996b46b52aa1c3fe1741c5f11a3c7",
         type: "GET",
         success:function (data) {
           console.log("Deu certo!");
