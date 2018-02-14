@@ -13,8 +13,8 @@ $(document).ready(function(){
         document.getElementById('heroImg').src = heroes[a].thumbnail.path +"/detail."+ heroes[a].thumbnail.extension
         //tag h3 id="heroName" -  setando texto no html
         document.getElementById('heroName').innerHTML = heroes[a].name
-        //tag img Id="conteudo" - setando src
-        document.getElementById('conteudo').src = heroes[a].urls[0].url
+        //tag img Id="conteudo" - setando src - linhas do modal
+        //document.getElementById('conteudo').src = heroes[a].urls[0].url
       },
       error:function (){
         console.log("Deu merda!");
@@ -50,13 +50,13 @@ $(document).ready(function(){
       })//fim do método $.ajax
     })//fim do botão
 
-    $('#mais').on('click', function(){
+    /*$('#mais').on('click', function(){
       $('#modal').fadeIn(500)
       $('#mais').hide()
     })
     $('.fechar').on('click', function(){
       $('#modal').fadeOut(500)
       $('#mais').show()
-    })
+    }) linhas referentes ao modal*/
 
   })//fim da função jquery
