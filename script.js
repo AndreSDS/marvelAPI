@@ -52,7 +52,7 @@ $(document).ready(function(){
 
     $('#mais').on('click', function(){
       $('#modal').fadeIn(500)
-      $(this).hide()
+      $('#mais').hide()
     })
     $('.fechar').on('click', function(){
       $('#modal').fadeOut(500)
