@@ -26,6 +26,8 @@ ready(function () {
             document.getElementById('heroImg').src = heroes[a].thumbnail.path +"/detail."+ heroes[a].thumbnail.extension
             //tag h3 id="heroName" -  setando texto no html
             document.getElementById('heroName').innerHTML = heroes[a].name
+            //tag a id="info" - setando href
+            document.getElementById('mais').href = heroes[a].urls[0].url
 
             //habilita botão após completar a requisição
             btn.disabled = false
